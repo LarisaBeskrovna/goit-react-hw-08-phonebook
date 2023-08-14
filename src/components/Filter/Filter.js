@@ -1,12 +1,10 @@
 import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fromfilter } from '..//../redux/filtr';
-import { selectFilter } from '..//../redux/selector';
 import css from './filter.module.css';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const filter = useSelector(selectFilter);
   const filterData = e => {
     dispatch(fromfilter(e.target.value));
   };
@@ -18,7 +16,6 @@ const Filter = () => {
         type="text"
         className={css.find_input}
         name="filter"
-        value={filter}
         pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
         onChange={filterData}
       />

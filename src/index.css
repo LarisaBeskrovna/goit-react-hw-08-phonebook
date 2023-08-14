@@ -7,6 +7,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.85),
+      rgba(47, 48, 58, 0.85)
+    ),
+    url(./image/fon.jpg) no-repeat;
+  background-position: top;
 }
 
 code {

@@ -1,0 +1,30 @@
+.form {
+  width: 320px;
+  color: #21a706;
+}
+
+.label {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.input {
+  height: 20px;
+  margin-top: 5px;
+  border-radius: 4px;
+}
+.reg_btn {
+  color: #21a706;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 10px;
+  cursor: pointer;
+}
+.reg_btn:hover,
+.reg_btn:active {
+  background: #21a706;
+  color: black;
+}

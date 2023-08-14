@@ -41,7 +41,7 @@ const AddContact = () => {
   const idNumber = useId();
 
   return (
-    <div className={css.main}>
+    <div>
       <form className={css.form} onSubmit={handleFormSubmit}>
         <label htmlFor={idName}>
           <h1 className={css.main_title}>Name</h1>
