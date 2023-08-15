@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { selectFilteredcontacts, selectFilter } from '..//../redux/selector';
-import { deleteContacts } from '..//../redux/operations';
+import { selectFilteredcontacts, selectFilter } from 'redux/contacts/selector';
+import { deleteContacts } from 'redux/contacts/operations';
 import css from './contacts.module.css';
 import Notification from '../Notification/Notification';
 
@@ -8,8 +8,8 @@ const Contacts = () => {
   const dispatch = useDispatch();
   const contacts = useSelector(selectFilteredcontacts);
   const filter = useSelector(selectFilter);
-  const handleDelete = e => {
-    dispatch(deleteContacts(e.target.value));
+  const handleDelete = id => {
+    dispatch(deleteContacts(id));
   };
 
   if (contacts.length > 0) {
@@ -26,7 +26,7 @@ const Contacts = () => {
                   <button
                     type="button"
                     className={css.delete_btn}
-                    onClick={handleDelete}
+                    onClick={() => handleDelete(id)}
                   >
                     Delete
                   </button>

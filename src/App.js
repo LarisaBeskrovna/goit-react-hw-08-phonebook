@@ -1,7 +1,7 @@
 import { useAuth } from 'hooks';
 import { lazy, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { refreshUser } from 'redux/authorize/operation';
 import { Model } from './components/Model/Model';
 import { LimitedPath } from './components/LimitedPath/LimitedPath';
@@ -44,6 +44,7 @@ export const App = () => {
           element={<PrivatePath redirectTo="/login" component={<MainPage />} />}
         />
       </Route>
+      <Route path="*" element={<Navigate to="/" />} />
     </Routes>
   );
 };

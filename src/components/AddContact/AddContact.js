@@ -1,8 +1,8 @@
 import css from './addContact.module.css';
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContacts } from 'redux/operations';
-import { selectContacts } from 'redux/selector';
+import { addContacts } from 'redux/contacts/operations';
+import { selectContacts } from 'redux/contacts/selector';
 import { useId } from 'react';
 
 const AddContact = () => {

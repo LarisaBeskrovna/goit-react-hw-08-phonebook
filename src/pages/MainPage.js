@@ -4,8 +4,8 @@ import Filter from '..//components/Filter/Filter';
 import Loader from 'components/Loader';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchContacts } from 'redux/operations';
-import { selectError, selectIsLoading } from 'redux/selector';
+import { fetchContacts } from 'redux/contacts/operations';
+import { selectError, selectIsLoading } from 'redux/contacts/selector';
 import css from '../components/Contacts/contacts.module.css';
 
 function Phonebook() {
